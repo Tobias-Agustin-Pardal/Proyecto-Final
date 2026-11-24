@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalua | Sistema de Gestión</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="aplicacion">
+        <aside class="barra-lateral">
+            <a class="marca" href="#">
+                <span class="marca-simbolo">K</span>
+                <span class="marca-texto"><strong>KALUA</strong><small>GESTIÓN DE ESTADÍAS</small></span>
+            </a>
+
+            <div class="titulo-menu">MENÚ PRINCIPAL</div>
+            <nav class="navegacion">
+                <a class="enlace-menu active" href="#inicio"><span class="icono-menu">⌂</span>Inicio</a>
+                <a class="enlace-menu" href="#reservas"><span class="icono-menu">▤</span>Reservas <span class="contador-menu">8</span></a>
+                <a class="enlace-menu" href="#clientes"><span class="icono-menu">♙</span>Clientes</a>
+                <a class="enlace-menu" href="#cabanas"><span class="icono-menu">⌂</span>Cabañas</a>
+                <a class="enlace-menu" href="#servicios"><span class="icono-menu">✳</span>Servicios</a>
+            </nav>
+
+            <div class="titulo-menu titulo-menu-separado">ADMINISTRACIÓN</div>
+            <nav class="navegacion">
+                <a class="enlace-menu" href="#movimientos"><span class="icono-menu">＄</span>Movimientos</a>
+                <a class="enlace-menu" href="#descuentos"><span class="icono-menu">％</span>Descuentos</a>
+            </nav>
+
+            <div class="pie-lateral">
+                <!--<div class="tarjeta-ayuda">
+                    <span class="icono-ayuda">✦</span>
+                    <strong>¿Necesitás ayuda?</strong>
+                    <p>Consultá la guía de uso del sistema.</p>
+                    <a href="#ayuda">Ver documentación <span>↗</span></a>
+                </div>-->
+                <div class="perfil-usuario">
+                    <div class="avatar">FP</div>
+                    <div class="datos-usuario"><strong>Franco P.</strong><small>Administrador</small></div>
+                    <span class="opciones-perfil">•••</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="contenido-principal" id="inicio">
+            <header class="barra-superior">
+                <div class="migas-pan">Panel de control <span>/</span> <strong>Inicio</strong></div>
+                <div class="acciones-superiores">
+                    <span class="fecha-actual">Lunes, 16 de noviembre de 2026</span>
+                    <button class="boton-icono" aria-label="Notificaciones">♧<i></i></button>
+                    <div class="avatar-superior">FP</div>
+                </div>
+            </header>
+
+            <section class="bienvenida">
+                <div>
+                    <p class="texto-etiqueta">RESUMEN GENERAL</p>
+                    <h1>Buen día, Franco <span>✦</span></h1>
+                    <p class="texto-bienvenida">Esto es lo que está pasando hoy en tu complejo.</p>
+                </div>
+                <a class="boton-principal" href="#nueva-reserva"><span>＋</span> Nueva reserva</a>
+            </section>
+
+            <section class="rejilla-indicadores" aria-label="Indicadores generales">
+                <article class="tarjeta-indicador">
+                    <div class="encabezado-indicador"><span>Reservas activas</span><span class="icono-indicador green">▤</span></div>
+                    <div class="valor-indicador">24</div>
+                    <div class="pie-indicador"><span class="tendencia">↗ 12%</span> <span>vs. mes anterior</span></div>
+                </article>
+                <article class="tarjeta-indicador">
+                    <div class="encabezado-indicador"><span>Cabañas ocupadas</span><span class="icono-indicador blue">⌂</span></div>
+                    <div class="valor-indicador">8 <small>/ 12</small></div>
+                    <div class="pie-indicador"><span class="barra-ocupacion"><i></i></span><span>67% de ocupación</span></div>
+                </article>
+                <article class="tarjeta-indicador">
+                    <div class="encabezado-indicador"><span>Ingresos del mes</span><span class="icono-indicador orange">$</span></div>
+                    <div class="valor-indicador">$ 1.280.000</div>
+                    <div class="pie-indicador"><span class="tendencia">↗ 8,4%</span> <span>vs. mes anterior</span></div>
+                </article>
+                <article class="tarjeta-indicador">
+                    <div class="encabezado-indicador"><span>Pagos pendientes</span><span class="icono-indicador violet">◷</span></div>
+                    <div class="valor-indicador">$ 185.000</div>
+                    <div class="pie-indicador"><span class="punto-pendiente"></span><span>4 movimientos por cobrar</span></div>
+                </article>
+            </section>
+
+            <section class="rejilla-contenido">
+                <article class="panel panel-reservas" id="reservas">
+                    <div class="encabezado-panel">
+                        <div><h2>Reservas recientes</h2><p>Últimas operaciones registradas</p></div>
+                        <a class="enlace-texto" href="#todas-reservas">Ver todas <span>→</span></a>
+                    </div>
+                    <div class="contenedor-tabla">
+                        <table>
+                            <thead><tr><th>CLIENTE</th><th>CABAÑA</th><th>FECHAS</th><th>IMPORTE</th><th>ESTADO</th></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="celda-cliente"><span class="avatar-pequeno avatar-a">MG</span><span><strong>María González</strong><small>DNI 32.456.789</small></span></div></td>
+                                    <td>Cabaña 04</td><td>18 nov. – 22 nov.</td><td class="importe">$ 180.000</td><td><span class="estado confirmada">Confirmada</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="celda-cliente"><span class="avatar-pequeno avatar-b">RL</span><span><strong>Roberto López</strong><small>DNI 28.123.456</small></span></div></td>
+                                    <td>Cabaña 02</td><td>20 nov. – 23 nov.</td><td class="importe">$ 135.000</td><td><span class="estado pendiente">Pendiente</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="celda-cliente"><span class="avatar-pequeno avatar-c">SP</span><span><strong>Sofía Pérez</strong><small>DNI 35.987.123</small></span></div></td>
+                                    <td>Cabaña 07</td><td>22 nov. – 26 nov.</td><td class="importe">$ 220.000</td><td><span class="estado confirmada">Confirmada</span></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="celda-cliente"><span class="avatar-pequeno avatar-d">JT</span><span><strong>Juan Torres</strong><small>DNI 30.654.321</small></span></div></td>
+                                    <td>Cabaña 01</td><td>25 nov. – 27 nov.</td><td class="importe">$ 90.000</td><td><span class="estado cancelada">Cancelada</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="panel panel-cabanas" id="cabanas">
+                    <div class="encabezado-panel">
+                        <div><h2>Estado de cabañas</h2><p>Disponibilidad actual</p></div>
+                        <a class="enlace-texto" href="#todas-cabanas">Ver todas <span>→</span></a>
+                    </div>
+                    <div class="resumen-cabanas">
+                        <div><strong>12</strong><span>Total</span></div>
+                        <div><strong class="numero-ocupadas">8</strong><span>Ocupadas</span></div>
+                        <div><strong class="numero-libres">4</strong><span>Libres</span></div>
+                    </div>
+                    <div class="lista-cabanas">
+                        <div class="fila-cabana"><span class="simbolo-cabana">⌂</span><span class="nombre-cabana"><strong>Cabaña 01</strong><small>2 personas</small></span><span class="estado ocupada">Ocupada</span></div>
+                        <div class="fila-cabana"><span class="simbolo-cabana">⌂</span><span class="nombre-cabana"><strong>Cabaña 02</strong><small>4 personas</small></span><span class="estado ocupada">Ocupada</span></div>
+                        <div class="fila-cabana"><span class="simbolo-cabana">⌂</span><span class="nombre-cabana"><strong>Cabaña 03</strong><small>2 personas</small></span><span class="estado disponible">Disponible</span></div>
+                        <div class="fila-cabana"><span class="simbolo-cabana">⌂</span><span class="nombre-cabana"><strong>Cabaña 04</strong><small>4 personas</small></span><span class="estado ocupada">Ocupada</span></div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="rejilla-inferior">
+                <article class="panel panel-movimientos" id="movimientos">
+                    <div class="encabezado-panel">
+                        <div><h2>Últimos movimientos</h2><p>Registro de ingresos y pagos</p></div>
+                        <a class="enlace-texto" href="#todos-movimientos">Ver movimientos <span>→</span></a>
+                    </div>
+                    <div class="lista-movimientos">
+                        <div class="fila-movimiento"><span class="icono-movimiento ingreso">↙</span><span class="descripcion-movimiento"><strong>Seña de reserva #1048</strong><small>Transferencia · 15 nov. 2026</small></span><strong class="importe-positivo">+$ 45.000</strong></div>
+                        <div class="fila-movimiento"><span class="icono-movimiento ingreso">↙</span><span class="descripcion-movimiento"><strong>Pago de reserva #1045</strong><small>Efectivo · 14 nov. 2026</small></span><strong class="importe-positivo">+$ 90.000</strong></div>
+                        <div class="fila-movimiento"><span class="icono-movimiento egreso">↗</span><span class="descripcion-movimiento"><strong>Devolución de seña #1039</strong><small>Transferencia · 13 nov. 2026</small></span><strong class="importe-negativo">−$ 20.000</strong></div>
+                    </div>
+                </article>
+                <article class="panel panel-accesos" id="servicios">
+                    <div class="encabezado-panel"><div><h2>Accesos rápidos</h2><p>Atajos a tareas frecuentes</p></div></div>
+                    <div class="enlaces-rapidos">
+                        <a href="#nueva-reserva"><span class="icono-rapido rapido-verde">＋</span><span><strong>Nueva reserva</strong><small>Registrar una estadía</small></span><b>→</b></a>
+                        <a href="#nuevo-cliente" id="clientes"><span class="icono-rapido rapido-azul">♙</span><span><strong>Agregar cliente</strong><small>Crear ficha de cliente</small></span><b>→</b></a>
+                        <a href="#registrar-pago"><span class="icono-rapido rapido-naranja">$</span><span><strong>Registrar movimiento</strong><small>Cargar un pago o seña</small></span><b>→</b></a>
+                    </div>
+                </article>
+            </section>
+
+            <pie-pagina class="pie-pagina"><span>REFUGIO · SISTEMA DE GESTIÓN</span><span>Panel de administración <b>•</b> Versión de diseño 1.0</span></pie-pagina>
+        </main>
+    </div>
+</body>
+</html>
