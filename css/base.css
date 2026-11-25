@@ -1,0 +1,168 @@
+:root {
+    --marron-oscuro: #30210e;
+    --marron-claro: #5c4e34;
+    --verde-lima: #7b851d;
+    --verde-oscuro: #334805;
+    --verde-claro: #a3a75b;
+    --verde-masclaro: #c6c49e;
+    
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+}
+
+.pagina {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.pagina > .cont-iz {
+    width: 22%;
+    background-color: var(--verde-oscuro);
+    padding: 0 2.5vw;
+    transition: 0.3s;
+}
+
+.pagina > .cont-iz.achicar {
+    width: 5vw;
+    padding: 0 1vw;
+}
+
+.marca-simbolo.achicar {
+    background-image: url(../resources/KaluaLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.opcion-iz.achicar a {
+    visibility: collapse;
+}
+
+.cont-iz > .cabecera-iz {
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    border-bottom: 1px solid var(--verde-masclaro);
+    width: 100%;
+    height: 20vh;
+}
+
+.marca-simbolo {
+    background-image: url(../resources/Mesa_de_trabajo_104.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cont-iz > .cont-opciones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 6vh;
+    gap: 2.5vh;
+    align-items: center;
+}
+
+.opcion-iz {
+    display: flex;
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 1.2vh 1.5vh;
+    font-size: 1.5rem;
+    font-family: DejaVu Sans Mono, monospace;
+    align-items: center;
+    justify-content: start;
+    border-radius: 0.8vh;
+    transition: 0.3s;
+}
+
+/*SIDEBAR*/
+.opcion-iz.activo {
+    background-color: rgba(198, 196, 158, 0.15);
+    border-color: var(--verde-claro);
+}
+
+.opcion-iz:hover .iconos {
+    display: inline-block;
+    animation: wiggle-icon 0.4s ease-in-out;
+}
+
+.opcion-iz:hover {
+    transform: translateX(6px);
+}
+
+.opcion-iz > .iconos {
+    font-size: 1.3rem;
+    color: var(--verde-masclaro);
+    margin-right: 0.9vw;
+}
+
+.opcion-iz > a {
+    text-decoration: none;
+    color: var(--verde-masclaro);
+}
+/*Contenedor Derhcio*/
+.pagina > .cont-der {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*BANNER*/
+.banner {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--verde-masclaro);
+    background-image: url(../resources/fondoKalua.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner-overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(48, 33, 14, 0.75) 0%, rgba(51, 72, 5, 0.4) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3vw;
+}
+
+.titulo-banner {
+    color: var(--verde-masclaro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.subtitulo-banner {
+    color: var(--verde-masclaro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 0.5vh;
+}
+
+
+
+
+/* ANIMACIONES */
+
+@keyframes wiggle-icon {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-12deg); }
+    75% { transform: rotate(12deg); }
+}
+
