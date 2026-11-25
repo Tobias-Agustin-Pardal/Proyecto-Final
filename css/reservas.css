@@ -1,0 +1,106 @@
+.banner {
+    background-image: none;
+}
+
+.banner-overlay{
+    background: none;
+}
+.titulo-banner{
+    color: var(--marron-claro)
+}
+.filtros{
+    width:100%;
+    height: 15%;
+    background-color: var(--verde-masclaro);
+}
+.cont-alquileres{
+    width: 100%;
+    height: 85%;
+    background-color:  var(--verde-masclaro);
+}
+
+.tarjeta-alq {
+    border-radius: 1vh;
+    background-color: var(--marron-claro);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2vh 1.8vh;
+    border-left: 5px solid var(--verde-oscuro);
+    transition: transform 0.2s;
+}
+
+.info-alq:hover {
+    transform: translateX(4px);
+}
+
+.alq-izq {
+    display: flex;
+    align-items: center;
+    gap: 1.2vw;
+}
+
+.iconos-alq {
+    height: 6vh;
+    width: 6vh;
+    min-width: 6vh;
+    border-radius: 50%;
+    background-color: var(--verde-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde-masclaro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.datos-cliente {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+}
+
+.usuario {
+    color: var(--marron-oscuro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.cabana-tag {
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--verde-masclaro);
+    background-color: var(--verde-lima);
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.cabana-tag.pendiente {
+    background-color: var(--marron-claro);
+}
+
+.alq-der {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4vh;
+}
+
+.descripcion {
+    color: var(--marron-claro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.monto-alq {
+    color: var(--marron-oscuro);
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
